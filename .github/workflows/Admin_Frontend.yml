@@ -48,7 +48,6 @@ jobs:
       - name: Deploy to EC2
         run: |
           # Run any build commands, if needed
-          npm install -g env-cmd
           export CI=false
           npm run build
           # Copy the built React app to your EC2 instance using SCP
