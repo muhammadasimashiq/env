@@ -50,4 +50,4 @@ jobs:
       - name: Deploy to EC2
         run: |
           # Copy the built React app to your EC2 instance using SCP
-          scp -r ./build/* ubuntu@13.112.225.81:/home/ubuntu/autodeploy
+          scp -r ./build/* ubuntu@13.112.225.81:/home/ubuntu/asim3
