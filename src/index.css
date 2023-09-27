@@ -1,0 +1,62 @@
+
+
+body {
+  font-family: "HelviticaNue";
+  margin:0;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("./fonts//AvenirNext/AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  font-family:"HelviticaNue";
+  src: url('./fonts/helveticaneue/HelveticaNeue\ Light.ttf');
+}
+
+@font-face {
+  font-family:"HelviticaNue-Bold";
+  src: url('./fonts/helveticaneue/HelveticaNeue\ Medium.ttf');
+}
+.jodit-status-bar {
+  visibility: collapse;
+}
+#input[type="file"] {
+  display: none;
+}
+.image-upload {
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.scroll::-webkit-scrollbar-thumb {
+  background: rgb(224, 21, 162); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: rgb(206 26 134); 
+}
+
+strong {
+  font-family: "AvenirNext";
+  font-family: "HelviticaNue-Bold";
+}
+.tox:not(.tox-tinymce-inline) .tox-editor-header{
+  bottom: 0px !important;
+  position: absolute;
+}
+.Wirisformula{
+  width: 500px !important;
+  max-width: 1000px !important;
+}
