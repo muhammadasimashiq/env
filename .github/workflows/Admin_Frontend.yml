@@ -17,9 +17,7 @@ jobs:
 
       - name: Cache node modules
         id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
@@ -45,10 +43,11 @@ jobs:
       - name: Install package dependencies
         run: npm install --force
 
+      - name: Build React App
+        run:  export CI=false
+              npm run build
+
       - name: Deploy to EC2
         run: |
-          # Run any build commands, if needed
-          export CI=false
-          npm run build
           # Copy the built React app to your EC2 instance using SCP
           scp -r ./build/* ubuntu@13.112.225.81:/home/ubuntu/autodeploy
